@@ -1,6 +1,5 @@
 import { DollarSign, ShoppingCart, Package, Tag, Trophy } from "lucide-react";
 import MetricCard from "../components/MetricCard";
-import Header from "../components/Header";
 import DateRangePicker from "../components/UI/DateRangePicker";
 import RevenueStats from "../components/RevenueStats";
 import { useEffect, useState } from "react";
@@ -1635,8 +1634,6 @@ const Dashboard = () => {
   if (!filterData) return <Loading/>;
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header Component */}
-      <Header />
 
       {/* Metric Cards Below Header */}
       <main className="p-6 pt-24">

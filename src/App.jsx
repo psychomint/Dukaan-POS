@@ -6,6 +6,7 @@ import MetricCard from "./components/MetricCard";
 import { StoreIcon } from "lucide-react";
 import Dashboard from "./pages/Dashboard";
 import Error from "./components/UI/Error";
+import TableComponent from "./components/TableCompo";
 
 
 const appRouter = createBrowserRouter([
@@ -30,19 +31,20 @@ const appRouter = createBrowserRouter([
     element: <Dashboard/>
   },
   {
+    path: "/product",
+    element: <TableComponent/>
+  },
+  {
     path: "*",
     element: <Error/>
-  }
-
-]
-);
+  },
+]);
 
 function App() {
-  return(
-    <div>
-      <RouterProvider router={appRouter}/>
-    </div>
-  )
+  return (
+    <RouterProvider router={appRouter} />
+  );
 }
+
 
 export default App;

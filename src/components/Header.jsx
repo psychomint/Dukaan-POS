@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { SignInButton, SignedOut, SignedIn, UserButton } from "@clerk/clerk-react";
-import saranaLogo from '../asset/Dukaan_Logo.png';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);

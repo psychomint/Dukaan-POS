@@ -5,14 +5,19 @@ import App from './App';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import { ClerkProvider } from "@clerk/clerk-react";
-
+import Header from './components/Header';
 const clerkPublishableKey = "pk_test_ZWxlY3RyaWMtbXVzdGFuZy02My5jbGVyay5hY2NvdW50cy5kZXYk";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <ClerkProvider publishableKey={clerkPublishableKey}>
   <Provider store={store}>
-    <App />
+  <main className="min-h-screen flex flex-col">
+    <Header/>
+    <div className="mt-4">  {/* Adds space between Header and App */}
+      <App />
+    </div>
+  </main>
   </Provider>
 </ClerkProvider>
 
